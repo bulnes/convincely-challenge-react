@@ -1,3 +1,14 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +45,130 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.movies-header {
+  border-bottom: 1px solid #D8E1EB;
+  margin-bottom: 24px;
+
+  max-width: 1008px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #0C1932;
+    margin-bottom: 8px;
+  }
+
+  &__info {
+    display: grid;
+    gap: 17px;
+
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 980px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba(12, 25, 50, 0.8);
+  }
+}
+
+.movies-container {
+  display: grid;
+  gap: 16px;
+
+  max-width: 1008px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 760px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 980px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.movie-box {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(12, 25, 50, 0.12);
+  border-radius: 6px;
+
+  &__cover {
+    background-color: #ABBBCC;
+    width: 100%;
+    height: 160px;
+  }
+
+  &__content {
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #0C1932;
+    margin-bottom: 8px;
+  }
+
+  &__runtime {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(12, 25, 50, 0.6);
+    margin-bottom: 16px;
+  }
+
+  &__wins {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba(12, 25, 50, 0.8);
+
+    display: flex;
+    align-items: center;
+    gap: 13.21px;
+
+    margin-bottom: 19px;
+  }
+
+  &__money {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &-column {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 4px;
+
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba(12, 25, 50, 0.8);
+    }
+
+    &-desc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: rgba(12, 25, 50, 0.6);
+    }
   }
 }
